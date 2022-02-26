@@ -1,0 +1,76 @@
+body {
+    background: #ffffff00;
+}
+
+img{
+    width: 90px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.container{
+    background: #ffffff00;
+    margin: 20px;
+}
+
+/* This is the display area for every calculator entry. */
+.entry {
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(111, 87, 155, 0.479);
+    width: 265px;
+    height: 100px;
+    border-radius: 8px;
+    border-color: #ffffff00;
+    padding: 5px;
+    margin: 10px 2px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+/* The "background/border" of the calculator. */
+.calculator-container{
+    font-family: 'Ubuntu', sans-serif;
+    width: 300px;
+    background-color: rgba(200, 193, 218, 0.63);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.numberBut{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgba(195, 189, 211, 0.884);
+    color: rgb(41, 37, 65);
+    height: 40px;
+    width: 59px;
+    margin: 4px 4px;
+    border: none !important;
+}
+
+.mathBut{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgba(164, 156, 185, 0.884);
+    height: 40px;
+    width: 59px;
+    margin: 4px 4px;
+    border: none !important;
+}
+
+
+.equalBut{
+    font-family: 'Ubuntu', sans-serif;
+    height: 40px;
+    width: 126px;
+    margin: 4px 4px;
+    border: none !important;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

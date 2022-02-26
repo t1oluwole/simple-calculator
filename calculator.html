@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <!--This file consists of HTML code required to build a functional Calculator. 
+    This is a project piece to display my abilities to code in HTML, CSS, Javascript & BootStrap
+-->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+
+    <title>My HOMESKLD JavaScript Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <script src="calculator.js"></script>
+  </head>
+
+  <body>
+    <!-- A container is coded according to the BootStrap grid systems. -->
+
+    <!-- All text will be centred. -->
+    <div class="container text-center">
+      <!-- This is the border that will surround every button on the calculator. -->
+
+      <!--Commenting out the logo, future moderations to be made. 
+        <h1><img src="calculator-logo.png" alt="Calculator Brand" /></h1>
+    -->
+
+      <div class="calculator-container">
+        <!-- Calculator Display Screen.-->
+        <div class="row">
+          <form name="calculator">
+            <!-- Calculator entry will align to the right -->
+            <!-- 'readonly' function restricts users from being able to enter their own values unto the display screen.-->
+
+            <input
+              type="text"
+              id="entry"
+              class="entry text-right"
+              value="0"
+              readonly
+            />
+          </form>
+        </div>
+
+        <!-- Calculator Buttons -->
+        <div class="row">
+          <!-- I'll call different functions depending
+                    on which button is pressed -->
+          <!-- Default BootStrap Buttons https://getbootstrap.com/docs/4.0/components/buttons/ -->
+
+          <!--Top Row Buttons-->
+          <!--Number 7-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(7)"
+          >
+            7
+          </button>
+
+          <!--Number 8-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(8)"
+          >
+            8
+          </button>
+
+          <!--Number 9-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(9)"
+          >
+            9
+          </button>
+
+          <!--Addition Symbol-->
+          <button
+            id="mathBut"
+            type="button"
+            class="btn btn-success mathBut"
+            onclick="mathButPress('+')"
+          >
+            +
+          </button>
+        </div>
+
+        <!--2nd Row Buttons-->
+
+        <div class="row">
+          <!--Number 4-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(4)"
+          >
+            4
+          </button>
+
+          <!--Number 5-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(5)"
+          >
+            5
+          </button>
+
+          <!--Number 6-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(6)"
+          >
+            6
+          </button>
+
+          <!--Subtraction Symbol-->
+          <button
+            id="mathBut"
+            type="button"
+            class="btn btn-success mathBut"
+            onclick="mathButPress('-')"
+          >
+            -
+          </button>
+        </div>
+
+        <!--3rd Row Buttons-->
+
+        <div class="row">
+          <!--Number 1-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(1)"
+          >
+            1
+          </button>
+
+          <!--Number 2-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(2)"
+          >
+            2
+          </button>
+
+          <!--Number 3-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(3)"
+          >
+            3
+          </button>
+
+          <!--Multiplication Symbol-->
+          <button
+            id="mathBut"
+            type="button"
+            class="btn btn-success mathBut"
+            onclick="mathButPress('*')"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!--4th Row Buttons-->
+
+        <div class="row">
+          <!--AC - All Clear Button-->
+          <button
+            id="clearBut"
+            type="button"
+            class="btn btn-danger numberBut"
+            onclick="clearButPress()"
+          >
+            AC
+          </button>
+
+          <!--Number 0-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress(0)"
+          >
+            0
+          </button>
+
+          <!--Decimal Point-->
+          <button
+            id="decimalBut"
+            type="button"
+            class="btn btn-primary numberBut"
+            onclick="numButPress('.')"
+          >
+            .
+          </button>
+
+          <!--Division Symbol-->
+          <button
+            id="mathBut"
+            type="button"
+            class="btn btn-success mathBut"
+            onclick="mathButPress('/')"
+          >
+            &divide;
+          </button>
+        </div>
+
+        <!--5th Row Buttons-->
+        <div class="row">
+          <!--MC Copy Memory Button-->
+          <button
+            id="addMemBut"
+            type="button"
+            class="btn btn-warning numberBut"
+            onclick="copyButPress()"
+          >
+            MC
+          </button>
+
+          <!--MC Paste Memory Button-->
+          <button
+            id="numberBut"
+            type="button"
+            class="btn btn-warning numberBut"
+            onclick="pasteButPress()"
+          >
+            MP
+          </button>
+
+          <!--Equals Button-->
+          <button
+            id="decimalBut"
+            type="button"
+            class="btn btn-info equalBut"
+            onclick="equalButPress()"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--BootStrap Script-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
